@@ -1,0 +1,30 @@
+{
+  "name": "gmail-ai-reply-drafter",
+  "version": "0.1.0",
+  "description": "Create Korean business reply drafts in Gmail using OpenAI, without automatic sending.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "check": "tsc --noEmit -p tsconfig.json",
+    "test:sample": "npm run build && node dist/sampleTest.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "googleapis": "^144.0.0",
+    "html-to-text": "^9.0.5",
+    "openai": "^4.77.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
